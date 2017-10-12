@@ -23,36 +23,56 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <meta name="twitter:site" content="@acachawiki" />
     <meta name="twitter:creator" content="@acacha1" />
 
-    <title>{{ trans('adminlte_lang::message.landingdescriptionpratt') }}</title>
+    <title>LBB Express</title>
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('/css/all-landing.css') }}" rel="stylesheet">
 
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- start: CSS -->
+    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/bootstrap-responsive.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/slider1.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/slider2.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/slider3.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
 <body data-spy="scroll" data-target="#navigation" data-offset="50">
 
-<div id="app" v-cloak>
+<div id="app" >
     <!-- Fixed navbar -->
-    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div id="navigation" class="navbar navbar-default navbar-fixed-top" style="background-color:white" >
         <div class="container">
             <div class="navbar-header">
+
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
+
                 </button>
-                <a class="navbar-brand" href="#"><b>adminlte-laravel</b></a>
+                
+                <a class="navbar-brand" href="#"><b>Express</b></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#home" class="smoothScroll">{{ trans('adminlte_lang::message.home') }}</a></li>
-                    <li><a href="#desc" class="smoothScroll">{{ trans('adminlte_lang::message.description') }}</a></li>
-                    <li><a href="#showcase" class="smoothScroll">{{ trans('adminlte_lang::message.showcase') }}</a></li>
-                    <li><a href="#contact" class="smoothScroll">{{ trans('adminlte_lang::message.contact') }}</a></li>
+                    <li><a href="#aboutus" class="smoothScroll">About Us</a></li>
+                    <li><a href="#keunggulan" class="smoothScroll">Keunggulan</a></li>
+                    <li><a href="#program" class="smoothScroll">Program</a></li>
+                    <li><a href="#testimonial" class="smoothScroll">Testimonial</a></li>
+                    <li><a href="#contact" class="smoothScroll">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::guest())
@@ -68,225 +88,620 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 
 
     <section id="home" name="home">
-        <div id="headerwrap">
-            <div class="container">
-                <div class="row centered">
-                    <div class="col-lg-12">
-                        <h1>Acacha <b><a href="https://github.com/acacha/adminlte-laravel">adminlte-laravel</a></b></h1>
-                        <h3>A <a href="https://laravel.com/">Laravel</a> {{ trans('adminlte_lang::message.laravelpackage') }}
-                            scaffolding/boilerplate {{ trans('adminlte_lang::message.to') }} <a href="https://almsaeedstudio.com/preview">AdminLTE</a> {{ trans('adminlte_lang::message.templatewith') }}
-                            <a href="http://getbootstrap.com/">Bootstrap</a> 3.0 {{ trans('adminlte_lang::message.and') }} <a href="http://blacktie.co/demo/pratt/">Pratt</a> Landing page</h3>
-                        <h3><a href="{{ url('/register') }}" class="btn btn-lg btn-success">{{ trans('adminlte_lang::message.gedstarted') }}</a></h3>
+
+    <div id="home">
+
+        <div class="demo-1">
+
+
+            <div id="slider" class="sl-slider-wrapper">
+
+                <div class="sl-slider">
+
+                    <div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                        <div class="sl-slide-inner">
+                            
+                            <img src="{{ asset('/img/banner.jpg') }}" width="100%" height="10%" />"
+                            
+                        </div>
                     </div>
-                    <div class="col-lg-2">
-                        <h5>{{ trans('adminlte_lang::message.amazing') }}</h5>
-                        <p>{{ trans('adminlte_lang::message.basedadminlte') }}</p>
-                        <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/img/arrow1.png') }}">
+
+                    <div class="sl-slide bg-2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                        <div class="sl-slide-inner">
+                            <img src="{{ asset('/img/map2.jpg') }}" width="100%" />"
+                            
+                        </div>
                     </div>
-                    <div class="col-lg-8">
-                        <img class="img-responsive" src="{{ asset('/img/app-bg.png') }}" alt="">
+
+                    <div class="sl-slide bg-3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                        <div class="sl-slide-inner">
+                            
+                            <img src="{{ asset('/img/map3.jpg') }}" width="100%" />"
+                        </div>
                     </div>
-                    <div class="col-lg-2">
-                        <br>
-                        <img class="hidden-xs hidden-sm hidden-md" src="{{ asset('/img/arrow2.png') }}">
-                        <h5>{{ trans('adminlte_lang::message.awesomepackaged') }}</h5>
-                        <p>... {{ trans('adminlte_lang::message.by') }} <a href="http://acacha.org/sergitur">Sergi Tur Badenas</a> {{ trans('adminlte_lang::message.at') }} <a href="http://acacha.org">acacha.org</a> {{ trans('adminlte_lang::message.readytouse') }}</p>
+
+                    <div class="sl-slide bg-4" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+                        <div class="sl-slide-inner">
+                            <div class="deco" data-icon="I"></div>
+                            <h2>WeB Eksklusif bagi Siswa</h2>
+                            <blockquote><p>The human body has no more need for cows' milk than it does for dogs' milk, horses' milk, or giraffes' milk.</p><cite>Michael Klaper M.D.</cite></blockquote>
+                        </div>
                     </div>
-                </div>
-            </div> <!--/ .container -->
-        </div><!--/ #headerwrap -->
+
+                    <div class="sl-slide bg-5" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
+                        <div class="sl-slide-inner">
+                            <div class="deco" data-icon="t"></div>
+                            <h2>Konsultasi Tugas dan Materi 24 Jam</h2>
+                            <blockquote><p>I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.</p><cite>Margi Clarke</cite></blockquote>
+                        </div>
+                    </div>
+                </div><!-- /sl-slider -->
+
+                <nav id="nav-arrows" class="nav-arrows">
+                    <span class="nav-arrow-prev">Previous</span>
+                    <span class="nav-arrow-next">Next</span>
+                </nav>
+
+                <nav id="nav-dots" class="nav-dots">
+                    <span class="nav-dot-current"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </nav>
+
+            </div><!-- /slider-wrapper -->
+            </div>
+            </div>
+
     </section>
 
-    <section id="desc" name="desc">
-        <!-- INTRO WRAP -->
-        <div id="intro">
-            <div class="container">
-                <div class="row centered">
-                    <h1>{{ trans('adminlte_lang::message.designed') }}</h1>
-                    <br>
-                    <br>
-                    <div class="col-lg-4">
-                        <img src="{{ asset('/img/intro01.png') }}" alt="">
-                        <h3>{{ trans('adminlte_lang::message.community') }}</h3>
-                        <p>{{ trans('adminlte_lang::message.see') }} <a href="https://github.com/acacha/adminlte-laravel">{{ trans('adminlte_lang::message.githubproject') }}</a>, {{ trans('adminlte_lang::message.post') }} <a href="https://github.com/acacha/adminlte-laravel/issues">{{ trans('adminlte_lang::message.issues') }}</a> {{ trans('adminlte_lang::message.and') }} <a href="https://github.com/acacha/adminlte-laravel/pulls">{{ trans('adminlte_lang::message.pullrequests') }}</a></p>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="{{ asset('/img/intro02.png') }}" alt="">
-                        <h3>{{ trans('adminlte_lang::message.schedule') }}</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="{{ asset('/img/intro03.png') }}" alt="">
-                        <h3>{{ trans('adminlte_lang::message.monitoring') }}</h3>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    </div>
+    <section id="aboutus" name="aboutus">
+       <div id="about" class="color yellow">
+        
+        <!--start: Container -->
+        <div class="container">
+
+            <!--start: Wrapper -->
+            <div class="wrapper span12">
+
+                            <!-- start: Page Title -->
+            <div id="page-title">
+
+                <div id="page-title-inner">
+
+                        <h1><span><marquee>SELAMAT DATANG</marquee></span></h1>
+
+                </div>  
+
+            </div>
+            <!-- end: Page Title -->                
+        
+            <!--start: Row -->
+            <div class="row-fluid">
+        
+                <div class="span12">
+                    
+                    <!-- start: About Us -->
+                    <div id="story">
+                        
+                        <h3>
+                            Apakah anda mencari layanan guru les privat tang handal dan profesional di Surabaya ? Dengan beragam pilihan les privat yang tersedia , LBB Express hadir dengan berbagai keunggulan yang ada mulai dari tentor yang berkualitas dari perguruan tinggi terbaik di surabaya , berbagai fasilitas yang lengkap mulai dari modul , free konsultasi dan bertanya via web eksklusif bagi setiap siswa , free pendaftaran dan masih banyak lagi.
+                        </h3>
+                        <h3>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                        </>
+                    
+                    </div>  
+                    <!-- end: About Us -->
+
+                    <!-- start: History -->
+                    
+                    <!-- end: History -->
+
                 </div>
-                <br>
-                <hr>
-            </div> <!--/ .container -->
-        </div><!--/ #introwrap -->
-
-        <!-- FEATURES WRAP -->
-        <div id="features">
-            <div class="container">
-                <div class="row">
-                    <h1 class="centered">{{ trans('adminlte_lang::message.whatnew') }}</h1>
-                    <br>
-                    <br>
-                    <div class="col-lg-6 centered">
-                        <img class="centered" src="{{ asset('/img/mobile.png') }}" alt="">
-                    </div>
-
-                    <div class="col-lg-6">
-                        <h3>{{ trans('adminlte_lang::message.features') }}</h3>
-                        <br>
-                        <!-- ACCORDION -->
-                        <div class="accordion ac" id="accordion2">
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                        {{ trans('adminlte_lang::message.design') }}
-                                    </a>
-                                </div><!-- /accordion-heading -->
-                                <div id="collapseOne" class="accordion-body collapse in">
-                                    <div class="accordion-inner">
-                                        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                    </div><!-- /accordion-inner -->
-                                </div><!-- /collapse -->
-                            </div><!-- /accordion-group -->
-                            <br>
-
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                                        {{ trans('adminlte_lang::message.retina') }}
-                                    </a>
-                                </div>
-                                <div id="collapseTwo" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                    </div><!-- /accordion-inner -->
-                                </div><!-- /collapse -->
-                            </div><!-- /accordion-group -->
-                            <br>
-
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                                        {{ trans('adminlte_lang::message.support') }}
-                                    </a>
-                                </div>
-                                <div id="collapseThree" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                    </div><!-- /accordion-inner -->
-                                </div><!-- /collapse -->
-                            </div><!-- /accordion-group -->
-                            <br>
-
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                                        {{ trans('adminlte_lang::message.responsive') }}
-                                    </a>
-                                </div>
-                                <div id="collapseFour" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                    </div><!-- /accordion-inner -->
-                                </div><!-- /collapse -->
-                            </div><!-- /accordion-group -->
-                            <br>
-                        </div><!-- Accordion -->
-                    </div>
+                
+            </div>
+            <!--end: Row -->
+            
+            <!-- start: Row -->
+            <div class="row-fluid">     
+                
+                <div class="span12">
+                    
+                    <!-- start: Skills -->
+                    
+                    <!-- end: Skills -->
+                        
                 </div>
-            </div><!--/ .container -->
-        </div><!--/ #features -->
+                
+            </div>
+            <!--end: Row -->
+            </div>
+            <!-- end: Wrapper -->
+        
+        </div>
+        <!--end: Container -->
+        
+    </div>
     </section>
 
-    <section id="showcase" name="showcase">
-        <div id="showcase">
-            <div class="container">
-                <div class="row">
-                    <h1 class="centered">{{ trans('adminlte_lang::message.screenshots') }}</h1>
-                    <br>
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div id="carousel-example-generic" class="carousel slide">
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            </ol>
+    <section id="keunggulan" name="keunggulan" style="background-color:black">
+       <div id="services" class="color black">
+        
+        <!--start: Container -->
+        <div class="container">
 
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="{{ asset('/img/item-01.png') }}" alt="">
-                                </div>
-                                <div class="item">
-                                    <img src="{{ asset('/img/item-02.png') }}" alt="">
-                                </div>
+            <!--start: Wrapper -->
+            <div class="wrapper span12">
+                
+                            <!-- start: Page Title -->
+            <div id="page-title">
+
+                <div id="page-title-inner">
+
+                    <h2><span>Mengapa Memilih LBB Expres ?</span></h2>
+
+                </div>  
+
+            </div>
+            <!-- end: Page Title -->
+            
+            <!-- start: Row -->
+            
+            <!-- end: Row -->   
+    
+            <!-- start: Row -->
+            <div class="row-fluid">
+    
+                <div class="span4">
+                    <div class="icons-box">
+                        
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <h3>Tentor Berkualitas</h3>
+                        <p>
+                            Tentor LBB Expree berasal dari perguruan tinggi terbaik di Surabaya yaitu Unair , ITS , dan Unesa
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="span4">
+                    <div class="icons-box">
+                        <i class="fa fa-money"></i>
+                        <h3>Biaya Terjangkau</h3>
+                        <p>
+                            Harga les privat di LBB Express sangat terjangkau di bandingkan dengan Lembaga bimbingan belajar lainya
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="span4">
+                    <div class="icons-box">
+                        <i class="fa fa-dollar"></i>
+                        <h3>Free Biaya Pendaftaran</h3>
+                        <p>
+                            Jika di Lbb lain ada biaya untuk pendaftaran , beda dengan di LBB Express yang tanpa biaya pendafatran , alias Gratis!!
+                    </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row-fluid">
+    
+                <div class="span4">
+                    <div class="icons-box">
+                        <i class="fa fa-book"></i>
+                        <h3>Fasilitas Lengkap</h3>
+                        <p>
+                            LBB Express menghadirkan banyak fasilitas bagi setiap siswa mulai dari modul , konsultasi atau tanya jawab pr via web express dan masih banyak lagi
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="span4">
+                    <div class="icons-box">
+                        <i class="fa fa-crosshairs"></i>
+                        <h3>Fokus</h3>
+                        <p>
+                            Harga les privat di LBB Express sangat terjangkau di bandingkan dengan Lembaga bimbingan belajar lainya
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="span4">
+                    <div class="icons-box">
+                        <i class="fa fa-line-chart"></i>
+                        <h3>Lembar Evaluasi</h3>
+                        <p>
+                            Jika di Lbb lain ada biaya untuk pendaftaran , beda dengan di LBB Express yang tanpa biaya pendafatran , alias Gratis!!
+                    </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end: Row -->
+            
+            <div class="clearfix"></div>
+            <hr class="clean">                  
+            </div>
+            <!-- end: Wrapper -->
+        
+        </div>
+        <!--end: Container -->
+        
+    </div>
+    <!-- end: 2nd Page - Services -->
+    </section>
+
+    <section id="program" name="program">
+       <!-- start: 3rd Page - Pricing Tables -->
+    <div id="pricing" class="color blue">
+        
+        <!--start: Container -->
+        <div class="container">
+
+            <!--start: Wrapper -->
+            <div class="wrapper span12">
+
+                            <!-- start: Page Title -->
+            <div id="page-title">
+
+                <div id="page-title-inner">
+
+                    <h2><span>Pilihan Program Les</span></h2>
+
+                </div>  
+
+            </div>
+            <!-- end: Page Title -->
+                
+            <!-- start: Table -->
+            <div class="four-tables">
+                
+                <!-- start: Row -->
+                <div class="row-fluid">
+                    
+                    <div class="span3">
+                        <div class="pricing-table">
+                            <div class="color-cccddd">
+                                <h3>Les Privat SD</h3>
+                                <!--<h4><span class="price">30.000</span> <span class="time">per meet</span></h4>-->
+                                <ul>
+                                    <h3>Program les privat yang didesain khusus untuk siswa sekolah dasar mulai dari kelas 1 sampai kelas 6. Materi yang disesuaikan untuk siswa SD berdasarkan jenjangnya dengan diajarkan oleh tutor-tutor friendly , ramah , pintar , daan professional.</h3>
+                                    
+                    
+                                </ul>
+                                <a href="#" class="buy"><span>Daftar</span></a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <br>
-                <br>
-                <br>
-            </div><!-- /container -->
-        </div>
-    </section>
 
-    <section id="contact" name="contact">
-        <div id="footerwrap">
-            <div class="container">
-                <div class="col-lg-5">
-                    <h3>{{ trans('adminlte_lang::message.address') }}</h3>
-                    <p>
-                        Av. Greenville 987,<br/>
-                        New York,<br/>
-                        90873<br/>
-                        United States
-                    </p>
-                </div>
+                    <div class="span3">
+                        <div class="pricing-table">
+                            <div class="color-cccddd">
+                                <h3>Les Privat SMP</h3>
+                                <!--<h4><span class="price">30.000</span> <span class="time">per meet</span></h4>-->
+                                <ul>
+                                    <h3>Les privat untuk siswa SMP/MTS mulai dari kelas 7 sampai kelas 9. Termasuk paket persiapam menghadapi ujian nasional SMP. Materi pelajaran SMP yang disesuaikan dengan kebutuhan siswa menjadikan kegiatan belajar lebih efektif.</h3>
+                                    
+                    
+                                </ul>
+                                
+                                <a href="#" class="buy"><span>Daftar</span></a>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="col-lg-7">
-                    <h3>{{ trans('adminlte_lang::message.dropus') }}</h3>
-                    <br>
-                    <form role="form" action="#" method="post" enctype="plain">
-                        <div class="form-group">
-                            <label for="name1">{{ trans('adminlte_lang::message.yourname') }}</label>
-                            <input type="name" name="Name" class="form-control" id="name1" placeholder="{{ trans('adminlte_lang::message.yourname') }}">
+                    <div class="span3">
+                        <div class="pricing-table">
+                            <div class="color-666777">
+                                <h3>Les Privat SMA</h3>
+                                <!--<h4><span class="price">30.000</span> <span class="time">per meet</span></h4>-->
+                                <ul>
+                                    <h3>Les privat untuk siswa SMA , mulai dari kelas 10 , 11 , dan 12 , hingga persipan Ujian Nasional , SBMPTN , atau tes masuk Perguruan Tinggi Favorit. Dengan tutor yang professional dan ahli di bidangnya , membuat kegiatan belajar lebih berkualitas.</h3>
+                                    
+                    
+                                </ul>
+                                    
+                                
+                                <a href="#" class="buy"><span>Daftar</span></a>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email1">{{ trans('adminlte_lang::message.emailaddress') }}</label>
-                            <input type="email" name="Mail" class="form-control" id="email1" placeholder="{{ trans('adminlte_lang::message.enteremail') }}">
+                    </div>  
+
+                    <div class="span3">
+                        <div class="pricing-table">
+                            <div class="color-666777">
+                                <h3>Les Privat Mahasiswa</h3>
+                                <!--<h4><span class="price">30.000</span> <span class="time">per meet</span></h4>-->
+                                <ul>
+                                    <h3>LBB Express membuka program les privat bagi mahasiswa. Jika anda mahasiswa membutuhkan tutor untuk memahami mata kuliah - mata kuliah yang sulit. LBB Express siap menyediakan tutor tutor terbaik untuk membantu belajar anda.</h3>
+                                    
+                    
+                                </ul>
+                                    
+                                
+                                <a href="#" class="buy"><span>Daftar</span></a>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>{{ trans('adminlte_lang::message.yourtext') }}</label>
-                            <textarea class="form-control" name="Message" rows="3"></textarea>
+                    </div>  
+                    </div>
+                    </div>
+
+                    <div class="four-tables">
+                
+                <!-- start: Row -->
+                <div class="row-fluid">
+                    
+                    <div class="span3">
+                        <div class="pricing-table">
+                            <div class="color-cccddd">
+                                <h3>Les Privat Bahasa Inggris</h3>
+                                <!--<h4><span class="price">30.000</span> <span class="time">per meet</span></h4>-->
+                                <ul>
+                                    <h3>Anda mencari les privat Bahasa inggris yang berkualitas ? LBB Express membuka proram les privat Bahasa inggris mulai dari tingkat dasar , menengah , hingga lanjutan, untuk persiapan tes TOEFL/IELTS ,ataupun untuk persiapan ke Luar negri .</h3>
+                                    
+                    
+                                </ul>
+                                <a href="#" class="buy"><span>Daftar</span></a>
+                            </div>
                         </div>
-                        <br>
-                        <button type="submit" class="btn btn-large btn-success">{{ trans('adminlte_lang::message.submit') }}</button>
-                    </form>
-                </div>
+                    </div>
+
+                    <div class="span3">
+                        <div class="pricing-table">
+                            <div class="color-cccddd">
+                                <h3>Les Privat Bahasa Arab</h3>
+                                <!--<h4><span class="price">30.000</span> <span class="time">per meet</span></h4>-->
+                                <ul>
+                                    <h3>Kami membuka program les privat computer dengan guru datang ke rumah anda. Jika anda ingin menguasai beberapa skill computer dari mulai basic hingga lanjutan , atau bahkan ingin belajar Bahasa pemrograman, LBB Express pilihan yang tepat.</h3>
+                                    
+                    
+                                </ul>
+                                
+                                <a href="#" class="buy"><span>Daftar</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="span3">
+                        <div class="pricing-table">
+                            <div class="color-666777">
+                                <h3>Les Privat Agama Islam</h3>
+                                <!--<h4><span class="price">30.000</span> <span class="time">per meet</span></h4>-->
+                                <ul>
+                                    <h3>LBB Express membuka program les privat membaca Alquran dan berbagai pengetahuan agama islam. Jika anda mencari guru mengaji / guru agama islam di Surabaya LBB Express menyediakan guru mengaji yang siap datang ke rumah anda.</h3>
+                                    
+                    
+                            
+                                    
+                                </ul>
+                                <a href="#" class="buy"><span>Daftar</span></a>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="span3">
+                        <div class="pricing-table">
+                            <div class="color-666777">
+                                <h3>Les Privat Lainya</h3>
+                                <!--<h4><span class="price">30.000</span> <span class="time">per meet</span></h4>-->
+                                <ul>
+                                    <h3>Kami selalu berusaha memberikan layanan yang terbaik untuk anda. Seandainya anda memiliki kebutuhan les privat lainya , silahkan hubungi kami , dan kami akan berusaha mencarikan tentor yang terbaik sesuai dengan kebutuhan anda.</h3>
+                                    
+                    
+                                </ul>
+                                    
+                            
+                                <a href="#" class="buy"><span>Daftar</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                    
+                <!--end: Row -->
+
             </div>
+            <!-- end: Table -->
+            </div>
+            <!-- end: Wrapper -->
+        
         </div>
     </section>
-    <footer>
-        <div id="c">
-            <div class="container">
-                <p>
-                    <a href="https://github.com/acacha/adminlte-laravel"></a><b>admin-lte-laravel</b></a>. {{ trans('adminlte_lang::message.descriptionpackage') }}.<br/>
-                    <strong>Copyright &copy; 2015 <a href="http://acacha.org">Acacha.org</a>.</strong> {{ trans('adminlte_lang::message.createdby') }} <a href="http://acacha.org/sergitur">Sergi Tur Badenas</a>. {{ trans('adminlte_lang::message.seecode') }} <a href="https://github.com/acacha/adminlte-laravel">Github</a>
-                    <br/>
-                    AdminLTE {{ trans('adminlte_lang::message.createdby') }} Abdullah Almsaeed <a href="https://almsaeedstudio.com/">almsaeedstudio.com</a>
-                    <br/>
-                    Pratt Landing Page PROVA {{ trans('adminlte_lang::message.createdby') }} <a href="http://www.blacktie.co">BLACKTIE.CO</a>
+
+
+    <section id="testimonial" name="testimonial">
+    <div id="team" class="color white">
+        
+        <!--start: Container -->
+        <div class="container">
+
+            <!--start: Wrapper -->
+            <div class="wrapper span12">
+
+                <!-- start: Page Title -->
+<div id="page-title">
+
+    <div id="page-title-inner">
+
+            <h2><span>What Client Say ? </span></h2>
+
+    </div>  
+
+</div>
+<!-- end: Page Title -->                
+
+<!-- start: Row -->
+<div class="row-fluid">
+    
+    <div class ="span12">
+        
+        <!-- start: Team -->    
+        <div id="team">
+                        
+            <!-- start: Row -->
+            <div class="row-fluid">
+            
+                <!-- start: About Member -->
+                <div class="span3">
+                    <div class="avatar">
+                        <img class="img-circle" src="img/murid.jpg" alt="team member">
+                    </div>  
+                    <div class="team-name">Alam</div>
+                    <div class="position">SMA Al-Hikmah</div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+                    </p>
+                    
+                </div>
+                <!-- end: About Member -->
+                
+                <hr class="clean visible-phone">
+
+                <!-- start: About Member -->
+                <div class="span3">
+                    <div class="avatar">
+                        <img class="img-circle" src="img/murid.jpg" alt="team member">
+                    </div>  
+                    <div class="team-name">Alam</div>
+                    <div class="position">SMA Al-Hikmah</div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+                    </p>
+                    
+                </div>
+                <!-- end: About Member -->
+                
+                <hr class="clean visible-phone">
+                
+                <!-- start: About Member -->
+                <div class="span3">
+                    <div class="avatar">
+                        <img class="img-circle" src="img/murid.jpg" alt="team member">
+                    </div>  
+                    <div class="team-name">Alam</div>
+                    <div class="position">SMA Al-Hikmah</div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+                    </p>
+                    
+                </div>
+                <!-- end: About Member -->
+                
+                <hr class="clean visible-phone">
+
+                <!-- start: About Member -->
+                <div class="span3">
+                    <div class="avatar">
+                        <img class="img-circle" src="img/murid.jpg" alt="team member">
+                    </div>  
+                    <div class="team-name">Alam</div>
+                    <div class="position">SMA Al-Hikmah</div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+                    </p>
+                    
+                </div>
+                <!-- end: About Member -->
+                
+                <hr class="clean visible-phone">    
+            
+            </div>
+            <!-- end: Row -->
+
+        </div>
+        <!-- end: Team -->
+        
+    </div>  
+    
+</div>  
+<!-- end: Row -->
+            </div>
+            <!-- end: Wrapper -->
+        
+        </div>
+        <!--end: Container -->
+        
+    </div>
+    </section>
+      <section id="contact" name="contact">
+      <!-- end: 6th Page - Team -->
+    <div id="services" class="color black">
+        
+        <!--start: Container -->
+        <div class="container">
+
+            <!--start: Wrapper -->
+            <div class="wrapper span12">
+                
+                            <!-- start: Page Title -->
+            <div id="page-title">
+
+                <div id="page-title-inner">
+
+                    <h2><span> Hubungi Kami </span></h2>
+
+                </div>  
+
+            </div>
+            <!-- end: Page Title -->
+            
+            <!-- start: Row -->
+            
+            <!-- end: Row -->   
+    
+            <!-- start: Row -->
+            <div class="row-fluid">
+    
+                <div class="span4">
+                    <div class="icons-box">
+                        
+                        <i class="material-icons">&#xe0b0;</i>
+                        <h3>082145886861</h3>
+                        
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="span4">
+                    <div class="icons-box">
+                        <h3>Line</h3>
+                        <h3>siffiyan</h3>
+                        
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <div class="span4">
+                    <div class="icons-box">
+                        <i class="fa fa-instagram"></i>
+                        <h3>express.lbb</h3>
+                        
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            </div>
+            </div>
+      </section>
+    <footer style="background-color:black">
+        
+                <p style="color:white">
+                   
+                    <strong>Copyright &copy; 2017 <a href="#">Express-Dev</a></strong> 
+                   
                 </p>
 
-            </div>
-        </div>
     </footer>
 
 </div>
@@ -294,11 +709,100 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="{{ url (mix('/js/app-landing.js')) }}"></script>
+<script src="{{ mix('/js/app-landing.js') }}"></script>
 <script>
     $('.carousel').carousel({
         interval: 3500
     })
+</script>
+
+<!-- start: Java Script -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="{{ asset('/js/isotope.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/jquery.imagesloaded.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/flexslider.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/carousel.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/fancybox.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/twitter.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/modernizr.custom.79639.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/jquery.ba-cond.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/jquery.slitslider.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('/js/excanvas.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/jquery.flot.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/jquery.flot.pie.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/jquery.flot.stack.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/jquery.flot.resize.min.js') }}"></script>
+<script defer="defer" src="{{ asset('/js/custom.js') }}"></script>
+<script type="text/javascript"> 
+    $(function() {
+    
+        var Page = (function() {
+
+            var $navArrows = $( '#nav-arrows' ),
+                $nav = $( '#nav-dots > span' ),
+                slitslider = $( '#slider' ).slitslider( {
+                    onBeforeChange : function( slide, pos ) {
+
+                        $nav.removeClass( 'nav-dot-current' );
+                        $nav.eq( pos ).addClass( 'nav-dot-current' );
+
+                    }
+                } ),
+
+                init = function() {
+
+                    initEvents();
+                    
+                },
+                initEvents = function() {
+
+                    // add navigation events
+                    $navArrows.children( ':last' ).on( 'click', function() {
+
+                        slitslider.next();
+                        return false;
+
+                    } );
+
+                    $navArrows.children( ':first' ).on( 'click', function() {
+                        
+                        slitslider.previous();
+                        return false;
+
+                    } );
+
+                    $nav.each( function( i ) {
+                    
+                        $( this ).on( 'click', function( event ) {
+                            
+                            var $dot = $( this );
+                            
+                            if( !slitslider.isActive() ) {
+
+                                $nav.removeClass( 'nav-dot-current' );
+                                $dot.addClass( 'nav-dot-current' );
+                            
+                            }
+                            
+                            slitslider.jump( i + 1 );
+                            return false;
+                        
+                        } );
+                        
+                    } );
+
+                };
+
+                return { init : init };
+
+        })();
+
+        Page.init();
+    
+    });
 </script>
 </body>
 </html>

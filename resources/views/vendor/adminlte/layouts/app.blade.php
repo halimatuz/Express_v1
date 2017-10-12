@@ -29,8 +29,8 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="skin-blue sidebar-mini">
-<div id="app" v-cloak>
+<body class="fixed skin-red-light ">
+<div id="app">
     <div class="wrapper">
 
     @include('adminlte::layouts.partials.mainheader')
@@ -57,6 +57,7 @@ desired effect
 </div>
 @section('scripts')
     @include('adminlte::layouts.partials.scripts')
+    @yield('code-footer')
 @show
 
 </body>

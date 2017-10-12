@@ -33,6 +33,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('adminlte::home');
+        $data = [
+        'page' => 'home'
+        ];
+        return view('dashboard',$data);
+    }
+
+    public function input()
+    {
+        return view('.inventarisasset.input');
     }
 }
